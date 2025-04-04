@@ -9,6 +9,14 @@
 import SwiftUI
 
 public class RKManager : ObservableObject {
+
+    @Published public var currentDisplayMonth: Date {
+        if let selected = startDate {
+            return calendar.date(from: calendar.dateComponents([.year, .month], from: selected))!
+        } else {
+            return calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
+        }
+    }
     
     @Published public var calendar = Calendar.current
     @Published public var minimumDate: Date = Date()
@@ -203,6 +211,7 @@ public class RKManager : ObservableObject {
   
 }
 
+/*
 extension RKManager {
   @Published public var currentDisplayMonth: Date {
         if let selected = selectedDate {
@@ -211,4 +220,4 @@ extension RKManager {
             return calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
         }
     }
-}
+} */
