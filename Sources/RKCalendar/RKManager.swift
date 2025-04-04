@@ -204,7 +204,7 @@ public class RKManager : ObservableObject {
 }
 
 extension RKManager {
-    var currentDisplayMonth: Date {
+   public var currentDisplayMonth: Date {
         if let selected = selectedDate {
             return calendar.date(from: calendar.dateComponents([.year, .month], from: selected))!
         } else {
