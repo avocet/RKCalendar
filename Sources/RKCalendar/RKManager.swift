@@ -10,7 +10,7 @@ import SwiftUI
 
 public class RKManager : ObservableObject {
 
-    
+    @Published public var currentDisplayMonth: Date = Calendar.current.startOfMonth(for: Date())
     @Published public var calendar = Calendar.current
     @Published public var minimumDate: Date = Date()
     @Published public var maximumDate: Date = Date()
@@ -206,7 +206,7 @@ public class RKManager : ObservableObject {
 
 
 extension RKManager {
-   @Published public var currentDisplayMonth: Date = Calendar.current.startOfMonth(for: Date())
+
 
     
 } 
