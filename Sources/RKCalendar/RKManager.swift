@@ -210,3 +210,9 @@ extension RKManager {
 
     
 } 
+
+extension Calendar {
+    func startOfMonth(for date: Date) -> Date {
+        return self.date(from: self.dateComponents([.year, .month], from: date))!
+    }
+}
