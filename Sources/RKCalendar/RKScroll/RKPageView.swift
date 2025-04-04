@@ -87,9 +87,7 @@ public struct RKPageView<Content: View & Identifiable>: View {
                                     })
             )
         }.onAppear{ index = todayIndex() - 1 }
-        .onChange(of: index) { newValue in 
-               rkManager.monthOffset = newValue
-           }
+        
     }
     
     public func todayIndex() -> Int {
