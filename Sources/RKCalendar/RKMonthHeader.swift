@@ -21,10 +21,7 @@ public struct RKMonthHeader : View {
 
     public var body: some View {
         Text(getMonthHeader()).foregroundColor(rkManager.colors.monthHeaderColor)
-        .onAppear {
-            print("\(firstOfMonthForOffset())")
-             
-        }
+        
     }
     
     public func getMonthHeader() -> String {
