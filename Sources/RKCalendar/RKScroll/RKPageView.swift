@@ -58,6 +58,9 @@ public struct RKPageView<Content: View & Identifiable>: View {
                                     })
             )
         }.onAppear{ index = todayIndex() }
+        .onChange(of: index) { newIndex in
+             rkManager.monthOffset = newIndex
+         }
     }
     
     public var horizontalView: some View {
@@ -87,6 +90,9 @@ public struct RKPageView<Content: View & Identifiable>: View {
                                     })
             )
         }.onAppear{ index = todayIndex() - 1 }
+        .onChange(of: index) { newIndex in
+             rkManager.monthOffset = newIndex
+         }
         
     }
     
