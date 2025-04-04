@@ -87,15 +87,7 @@ public struct RKPageView<Content: View & Identifiable>: View {
                                     })
             )
         }.onAppear{ index = todayIndex() }
-        .onChange(of: index) { newIndex in
-               // 確保 index 不越界
-              if pages.indices.contains(newIndex) {
-                 let page = pages[newIndex]
-                 if let date = extractMonthDate(from: page) {
-                   rkManager.currentDisplayMonth = Calendar.current.startOfMonth(for: date)
-                 }
-        }
-}
+        
     }
     
     public func todayIndex() -> Int {
