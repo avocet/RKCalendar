@@ -22,7 +22,7 @@ public struct RKMonthHeader : View {
     public var body: some View {
         Text(getMonthHeader()).foregroundColor(rkManager.colors.monthHeaderColor)
         .onAppear {
-            rkManager.currentDisplayMonth = Calendar.current.startOfMonth(for: firstOfMonthForOffset())
+            rkManager.currentDisplayMonth =  firstOfMonthForOffset()
          }
     }
     
