@@ -23,8 +23,6 @@ public struct RKPage: View, Identifiable {
             RKMonth(monthOffset: index)
             Spacer()
         }.fixedSize(horizontal: false, vertical: false)
-         .onAppear {
-             rkManager.monthOffset = index
-          }
+         
     }
 }
