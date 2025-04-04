@@ -86,9 +86,9 @@ public struct RKPageView<Content: View & Identifiable>: View {
                                         DispatchQueue.main.async { self.isGestureActive = false }
                                     })
             )
-        }.onAppear{ index = todayIndex() -1 }
-        .onChange(of: index) {
-               rkManager.monthOffset = index
+        }.onAppear{ index = todayIndex() - 1 }
+        .onChange(of: index) { newValue in 
+               rkManager.monthOffset = newValue
            }
     }
     
