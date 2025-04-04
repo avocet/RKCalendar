@@ -41,6 +41,7 @@ public struct RKCalendarView: View {
             }
         }.onChange(of: index) { newValue in
                rkManager.monthOffset = newValue
+               print("index: \(newValue)")
           }
     }
     
